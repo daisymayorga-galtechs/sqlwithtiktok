@@ -1,7 +1,7 @@
 CREATE TABLE tiktokData (
   hashtag TEXT,
   number_timeUsed INTEGER,
-  catagory TEXT
+  category TEXT
 );
 
 INSERT INTO tiktokData VALUES
@@ -22,21 +22,60 @@ INSERT INTO tiktokData VALUES
   ;
 
 
-.print 'Hashtags greater than one trillion'
-SELECT hashtag
+
+--Let's look at all records in the list. There are 3 columns. Which column is numerical? Which columns are descriptive?
+SELECT 
+  hashtag,
+  number_timeUsed,
+  category
+FROM tiktokData
+
+
+
+--Let's sort them in order based on the number of times used, which one is used the most?
+SELECT
+hashtag,
+number_timeUsed,
+category
+FROM tiktokData
+order by number_timeUsed desc
+
+
+
+--Let's filter for Hashtags greater than one trillion, which category comes up the most?
+SELECT 
+  hashtag,
+  number_timeUsed,
+  category
 FROM tiktokData
 WHERE number_timeUsed > 1000000000000;
 
-.print
-.print 'Hashtag Catagories'
-SELECT
-catagory
-FROM tiktokData
-GROUP BY catagory;
 
-.print
-.print 'Hashtag Catagories'
-SELECT
-hashtag
+
+
+--Hashtag Catagories, how many unique categories are there?
+SELECT DISTINCT
+category
 FROM tiktokData
-WHERE catagory='Top';
+
+
+
+-- Let's look at just one category
+SELECT
+hashtag,
+number_timeUsed,
+category
+FROM tiktokData
+WHERE category='Top';
+
+
+-- For the one category, let's look at the hashtags in order of number of times used. What is the most used for this category?
+SELECT
+hashtag,
+number_timeUsed,
+category
+FROM tiktokData
+WHERE category='Top'
+order by number_timeUsed desc
+
+

@@ -79,3 +79,5 @@ WHERE category='Top'
 order by number_timeUsed desc
 
 
+-- This is the sql fiddle with all of the code
+http://sqlfiddle.com/#!5/86e903/11  

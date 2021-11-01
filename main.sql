@@ -1,6 +1,3 @@
-.header on
-.mode column
-
 CREATE TABLE tiktokData (
   hashtag TEXT,
   number_timeUsed INTEGER,
@@ -22,7 +19,6 @@ INSERT INTO tiktokData VALUES
   ('#popit', 880000000, 'Toys'),
   ('#dance', 328200000000, 'Dancing'),
   ('#tiktokdance', 13000000000, 'Dancing')
-  
   ;
 
 

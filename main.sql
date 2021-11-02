@@ -66,7 +66,7 @@ hashtag,
 number_timeUsed,
 category
 FROM tiktokData
-WHERE category='Top';
+WHERE category='Dancing';
 
 
 -- For the one category, let's look at the hashtags in order of number of times used. What is the most used for this category?
@@ -75,7 +75,7 @@ hashtag,
 number_timeUsed,
 category
 FROM tiktokData
-WHERE category='Top'
+WHERE category='Dancing'
 order by number_timeUsed desc
 
 
